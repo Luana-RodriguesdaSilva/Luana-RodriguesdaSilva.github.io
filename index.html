@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Luana</title>
+  <title>Portfólio Luana Rodrigues</title>
   <style>
     :root {
       --bg-principal: #0b132b;
       --bg-card: #1c2541;
       --texto-principal: #ffffff;
-      --texto-secundario: #a0aec0;
+      --texto-secundario: #e2e8f0; /* Cinza bem mais claro para legibilidade perfeita */
       --azul-destaque: #38bdf8;
       --borda-metalica: #2d3748;
+      --tag-bg: #2d3748;
     }
 
     body {
@@ -41,6 +42,7 @@
       margin: 0;
       font-size: 2.2rem;
       letter-spacing: -0.5px;
+      color: var(--texto-principal);
     }
 
     .subtitulo {
@@ -65,6 +67,30 @@
       font-size: 1.05rem;
     }
 
+    /* Badges de Skills */
+    .skills-container {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+    }
+
+    .skill-badge {
+      background-color: var(--tag-bg);
+      color: #cbd5e1;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid var(--borda-metalica);
+    }
+
+    .skill-badge.destaque {
+      color: var(--azul-destaque);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    /* Botões dos Projetos */
     .links-projetos {
       display: flex;
       gap: 1rem;
@@ -102,7 +128,7 @@
     }
 
     .btn-contato {
-      color: var(--texto-secundario);
+      color: #a0aec0;
       text-decoration: none;
       font-size: 0.95rem;
       display: flex;
@@ -129,12 +155,23 @@
       Busco oportunidade como Analista de Dados Júnior, aplicando análise, visualização e design para gerar valor.
     </p>
 
+    <!-- Seção de Tecnologias / Skills -->
+    <div class="skills-container">
+      <span class="skill-badge destaque">Power BI</span>
+      <span class="skill-badge destaque">Power Apps</span>
+      <span class="skill-badge destaque">Figma</span>
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">SQL</span>
+      <span class="skill-badge">HTML5 & CSS3</span>
+    </div>
+
+    <!-- Botões para as páginas de projetos -->
     <div class="links-projetos">
       <a href="ux.html" class="btn">Projetos de UX</a>
       <a href="dados.html" class="btn">Projetos de Dados</a>
     </div>
 
-    <!-- Seção de Contato Atualizada -->
+    <!-- Seção de Contato -->
     <div class="contatos">
       <a href="https://linkedin.com/in/luana-rodriguesdasilva" target="_blank" class="btn-contato">🔗 LinkedIn</a>
       <a href="https://github.com/Luana-RodriguesdaSilva" target="_blank" class="btn-contato">💻 GitHub</a>
