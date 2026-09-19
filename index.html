@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Luana</title>
+  <style>
+    /* Paleta de Cores Escura e Metálica */
+    :root {
+      --bg-principal: #0f172a;       /* Azul bem escuro / Quase preto */
+      --bg-card: #1e293b;            /* Cinza metálico escuro */
+      --texto-principal: #f8fafc;     /* Branco suave */
+      --texto-secundario: #94a3b8;   /* Cinza claro */
+      --azul-destaque: #38bdf8;      /* Azul elétrico/tecnológico */
+      --azul-hover: #0284c7;         /* Azul para efeito de clique */
+      --borda-metalica: #334155;     /* Detalhe cinza metálico */
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-principal);
+      color: var(--texto-principal);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 90%;
+      background-color: var(--bg-card);
+      border: 1px solid var(--borda-metalica);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--texto-principal);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitulo {
+      color: var(--azul-destaque);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--texto-principal);
+      border-bottom: 1px solid var(--borda-metalica);
+      padding-bottom: 0.4rem;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      color: var(--texto-secundario);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .links-container {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem 1.2rem;
+      background-color: transparent;
+      color: var(--azul-destaque);
+      border: 1px solid var(--azul-destaque);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: var(--azul-destaque);
+      color: var(--bg-principal);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+  </style>
 </head>
 <body>
-  <h1>Luana Rodrigues da Silva</h1>
-  <p>UX Designer & Analista de Dados</p>
 
-  <h2>Sobre mim</h2>
-  <p>
-    Atuo com análise de dados e automação de processos, criando soluções que reduzem atividades manuais e facilitam o acesso às informações.
-    Tenho experiência com Power BI, Power Apps e Figma, além de conhecimentos em Python e SQL.
-    Busco oportunidade como Analista de Dados Júnior, aplicando análise, visualização e design para gerar valor.
-  </p>
+  <div class="container">
+    <h1>Luana Rodrigues da Silva</h1>
+    <div class="subtitulo">UX Designer & Analista de Dados</div>
 
-  <a href="ux.html">Projetos de UX</a> | <a href="dados.html">Projetos de Dados</a>
+    <h2>Sobre mim</h2>
+    <p>
+      Atuo com análise de dados e automação de processos, criando soluções que reduzem atividades manuais e facilitam o acesso às informações.
+      Tenho experiência com Power BI, Power Apps e Figma, além de conhecimentos em Python e SQL.
+      Busco oportunidade como Analista de Dados Júnior, aplicando análise, visualização e design para gerar valor.
+    </p>
+
+    <div class="links-container">
+      <a href="ux.html" class="btn">Projetos de UX</a>
+      <a href="dados.html" class="btn">Projetos de Dados</a>
+    </div>
+  </div>
+
 </body>
 </html>
