@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos de Dados | Luana Rodrigues</title>
+  <style>
+    :root {
+      --bg-principal: #0b132b;
+      --bg-card: #1c2541;
+      --texto-principal: #ffffff;
+      --texto-secundario: #e2e8f0;
+      --azul-destaque: #38bdf8;
+      --borda-metalica: #2d3748;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-principal);
+      color: var(--texto-principal);
+      margin: 0;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 850px;
+      width: 100%;
+      background-color: var(--bg-card);
+      border: 1px solid var(--borda-metalica);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .header-page {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--borda-metalica);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--azul-destaque);
+    }
+
+    .btn-voltar {
+      color: var(--texto-secundario);
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1px solid var(--borda-metalica);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-voltar:hover {
+      color: var(--azul-destaque);
+      border-color: var(--azul-destaque);
+    }
+
+    .grid-projetos {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .card-projeto {
+      background-color: rgba(11, 19, 43, 0.5);
+      border: 1px solid var(--borda-metalica);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .card-projeto h3 {
+      margin-top: 0;
+      color: var(--texto-principal);
+    }
+
+    .card-projeto p {
+      color: var(--texto-secundario);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .link-projeto {
+      display: inline-block;
+      margin-top: 0.8rem;
+      color: var(--azul-destaque);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .link-projeto:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-page">
+      <h1>Projetos de Dados</h1>
+      <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+    </div>
+
+    <div class="grid-projetos">
+      <!-- Exemplo de Projeto -->
+      <div class="card-projeto">
+        <h3>Dashboard de Performance / Power BI</h3>
+        <p>Desenvolvimento de painel interativo para acompanhamento de métricas e indicadores operacionais, facilitando a visualização de resultados.</p>
+        <a href="https://github.com/Luana-RodriguesdaSilva" target="_blank" class="link-projeto">Ver projeto no GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
