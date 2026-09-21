@@ -12,7 +12,7 @@
       --texto-secundario: #cbd5e1;
       --azul-destaque: #38bdf8;
       --borda-container: #38bdf8;
-      --borda-card-forte: #475569; /* Borda bem definida para separar os cards */
+      --borda-card: #38bdf8;
     }
 
     body {
@@ -42,7 +42,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid var(--borda-card-forte);
+      border-bottom: 2px solid #334155;
       padding-bottom: 1rem;
       margin-bottom: 2rem;
     }
@@ -57,7 +57,7 @@
       color: var(--texto-secundario);
       text-decoration: none;
       font-size: 0.95rem;
-      border: 1.5px solid var(--borda-card-forte);
+      border: 1.5px solid #334155;
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
       transition: all 0.2s;
@@ -74,20 +74,18 @@
       gap: 1.8rem;
     }
 
-    /* Cards com borda 2px e destaque marcante */
     .card-projeto {
       background-color: #111a36;
-      border: 2px solid var(--borda-card-forte);
+      border: 2px solid var(--borda-card);
       border-radius: 12px;
       padding: 1.6rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card-projeto:hover {
       transform: translateY(-3px);
-      border-color: var(--azul-destaque);
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
     }
 
     .card-header {
@@ -193,6 +191,26 @@
         </div>
         <p>Projeto prático em Google Cloud Platform desenvolvido durante o Bootcamp da SoulCode, focado na organização de buckets Cloud Storage, manipulação de arquivos e conexão com banco de dados via Python.</p>
         <a href="https://colab.research.google.com/drive/1PbhcNqLC7Ay56GHt03ek7ob9SfptqJ4S?usp=sharing" target="_blank" class="link-projeto">Abrir Notebook GCP no Google Colab →</a>
+      </div>
+
+      <!-- Projeto 6: BigQuery + Looker Studio -->
+      <div class="card-projeto">
+        <div class="card-header">
+          <h3>Análise de Crimes em SP (2019-2020)</h3>
+          <span class="badge">BIGQUERY / LOOKER</span>
+        </div>
+        <p>Projeto prático desenvolvido no programa Desenvolve 2024 (Grupo Boticário & Alura), utilizando consultas SQL no BigQuery para extração de padrões criminais e construção de painel no Looker Studio.</p>
+        <a href="https://github.com/Luana-RodriguesdaSilva/Projeto-PraticoBigQuery_LookerStudio" target="_blank" class="link-projeto">Ver Repositório no GitHub →</a>
+      </div>
+
+      <!-- Projeto 7: Modelagem de Dados no Medium -->
+      <div class="card-projeto">
+        <div class="card-header">
+          <h3>Modelagem de Dados Relacional</h3>
+          <span class="badge">MODELAGEM / MEDIUM</span>
+        </div>
+        <p>Artigo técnico detalhando o projeto prático de modelagem de dados desenvolvido na Formação Dados do Programa Desenvolve 2024 (Grupo Boticário), cobrindo construção de Diagrama Entidade-Relacionamento (DER) e regras de negócio.</p>
+        <a href="https://medium.com/@luanarodrigues.35/projeto-pr%C3%A1tico-forma%C3%A3o-dados-desenvolve-grupo-botic%C3%A1rio-edi%C3%A7%C3%A3o-2024-f1e945d57a2e" target="_blank" class="link-projeto">Ler Artigo no Medium →</a>
       </div>
     </div>
   </div>
