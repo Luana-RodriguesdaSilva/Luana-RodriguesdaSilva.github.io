@@ -11,8 +11,8 @@
       --texto-principal: #ffffff;
       --texto-secundario: #cbd5e1;
       --azul-destaque: #38bdf8;
-      --borda-metalica: #3b82f6; /* Borda azul bem destacada */
-      --borda-card: #334155;
+      --borda-container: #38bdf8;
+      --borda-card-forte: #475569; /* Borda bem definida para separar os cards */
     }
 
     body {
@@ -32,7 +32,7 @@
       max-width: 850px;
       width: 100%;
       background-color: var(--bg-card);
-      border: 2px solid var(--borda-metalica);
+      border: 2px solid var(--borda-container);
       border-radius: 16px;
       padding: 2.5rem;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
@@ -42,7 +42,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--borda-card);
+      border-bottom: 2px solid var(--borda-card-forte);
       padding-bottom: 1rem;
       margin-bottom: 2rem;
     }
@@ -57,7 +57,7 @@
       color: var(--texto-secundario);
       text-decoration: none;
       font-size: 0.95rem;
-      border: 1px solid var(--borda-card);
+      border: 1.5px solid var(--borda-card-forte);
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
       transition: all 0.2s;
@@ -71,22 +71,23 @@
     .grid-projetos {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.8rem;
     }
 
-    /* Cards com bordas mais evidentes e efeito hover */
+    /* Cards com borda 2px e destaque marcante */
     .card-projeto {
-      background-color: rgba(11, 19, 43, 0.7);
-      border: 1.5px solid var(--borda-card);
+      background-color: #111a36;
+      border: 2px solid var(--borda-card-forte);
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.6rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
     }
 
     .card-projeto:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       border-color: var(--azul-destaque);
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.3);
     }
 
     .card-header {
@@ -100,7 +101,7 @@
     .card-projeto h3 {
       margin: 0;
       color: var(--texto-principal);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
     }
 
     .badge {
@@ -108,9 +109,9 @@
       color: var(--azul-destaque);
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 20px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border: 1px solid rgba(56, 189, 248, 0.4);
       white-space: nowrap;
     }
 
@@ -118,7 +119,7 @@
       color: var(--texto-secundario);
       font-size: 0.95rem;
       line-height: 1.5;
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
     }
 
     .link-projeto {
@@ -182,6 +183,16 @@
         </div>
         <p>Projeto prático em SQL desenvolvido durante o Bootcamp da SoulCode, focado na exploração de dados, controle de estoque por categoria e cruzamento de informações para apoio a decisões do negócio.</p>
         <a href="https://colab.research.google.com/drive/14skg3TouEr0g545uWpNO0-IFHyFxIspr?usp=sharing" target="_blank" class="link-projeto">Abrir Notebook SQL no Google Colab →</a>
+      </div>
+
+      <!-- Projeto 5: GCP / Buckets -->
+      <div class="card-projeto">
+        <div class="card-header">
+          <h3>Gestão e Integração de Dados no GCP</h3>
+          <span class="badge">GCP</span>
+        </div>
+        <p>Projeto prático em Google Cloud Platform desenvolvido durante o Bootcamp da SoulCode, focado na organização de buckets Cloud Storage, manipulação de arquivos e conexão com banco de dados via Python.</p>
+        <a href="https://colab.research.google.com/drive/1PbhcNqLC7Ay56GHt03ek7ob9SfptqJ4S?usp=sharing" target="_blank" class="link-projeto">Abrir Notebook GCP no Google Colab →</a>
       </div>
     </div>
   </div>
