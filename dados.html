@@ -9,9 +9,10 @@
       --bg-principal: #0b132b;
       --bg-card: #1c2541;
       --texto-principal: #ffffff;
-      --texto-secundario: #e2e8f0;
+      --texto-secundario: #cbd5e1;
       --azul-destaque: #38bdf8;
-      --borda-metalica: #2d3748;
+      --borda-metalica: #3b82f6; /* Borda azul bem destacada */
+      --borda-card: #334155;
     }
 
     body {
@@ -31,19 +32,19 @@
       max-width: 850px;
       width: 100%;
       background-color: var(--bg-card);
-      border: 1px solid var(--borda-metalica);
+      border: 2px solid var(--borda-metalica);
       border-radius: 16px;
       padding: 2.5rem;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     }
 
     .header-page {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--borda-metalica);
+      border-bottom: 1px solid var(--borda-card);
       padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     h1 {
@@ -56,7 +57,7 @@
       color: var(--texto-secundario);
       text-decoration: none;
       font-size: 0.95rem;
-      border: 1px solid var(--borda-metalica);
+      border: 1px solid var(--borda-card);
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
       transition: all 0.2s;
@@ -73,22 +74,51 @@
       gap: 1.5rem;
     }
 
+    /* Cards com bordas mais evidentes e efeito hover */
     .card-projeto {
-      background-color: rgba(11, 19, 43, 0.5);
-      border: 1px solid var(--borda-metalica);
-      border-radius: 10px;
+      background-color: rgba(11, 19, 43, 0.7);
+      border: 1.5px solid var(--borda-card);
+      border-radius: 12px;
       padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card-projeto:hover {
+      transform: translateY(-2px);
+      border-color: var(--azul-destaque);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .card-projeto h3 {
-      margin-top: 0;
+      margin: 0;
       color: var(--texto-principal);
+      font-size: 1.2rem;
+    }
+
+    .badge {
+      background-color: rgba(56, 189, 248, 0.15);
+      color: var(--azul-destaque);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      white-space: nowrap;
     }
 
     .card-projeto p {
       color: var(--texto-secundario);
       font-size: 0.95rem;
       line-height: 1.5;
+      margin-top: 0.5rem;
     }
 
     .link-projeto {
@@ -97,6 +127,7 @@
       color: var(--azul-destaque);
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.95rem;
     }
 
     .link-projeto:hover {
@@ -115,23 +146,42 @@
     <div class="grid-projetos">
       <!-- Projeto 1: Spotify -->
       <div class="card-projeto">
-        <h3>Análise de Dados do Spotify / Power BI</h3>
-        <p>Relatório interativo construído em Power BI analisando o histórico de reprodução, incluindo rankings de artistas e músicas mais ouvidas ao longo dos meses.</p>
+        <div class="card-header">
+          <h3>Análise de Dados do Spotify</h3>
+          <span class="badge">POWER BI</span>
+        </div>
+        <p>Relatório interativo construído em Power BI analisando o histórico de reprodução musical, incluindo rankings de artistas e músicas mais ouvidas ao longo dos meses.</p>
         <a href="https://app.powerbi.com/view?r=eyJrIjoiNDAyZDMxOTktM2IxMS00OTFmLTgxNWQtYzcwZGI4ODAxZjg0IiwidCI6IjNhMmI2MzQ2LWY3ZDctNDhjOC1iOTc0LTQ4YWRhMzRiYzc1NSJ9" target="_blank" class="link-projeto">Abrir Dashboard Interativo →</a>
       </div>
 
       <!-- Projeto 2: Logística -->
       <div class="card-projeto">
-        <h3>Visualização de Dados Logísticos / Power BI</h3>
-        <p>Projeto prático de análise de dados logísticos desenvolvido durante o Bootcamp da SoulCode, com acompanhamento de custos de frete, combustível, manutenção e lucratividade por tipo de veículo.</p>
+        <div class="card-header">
+          <h3>Visualização de Dados Logísticos</h3>
+          <span class="badge">POWER BI</span>
+        </div>
+        <p>Projeto prático desenvolvido durante o Bootcamp Analista de Dados e Plataformas LowCode da SoulCode, com acompanhamento de custos de frete, combustível, manutenção e lucratividade por veículo.</p>
         <a href="https://app.powerbi.com/view?r=eyJrIjoiZmEwZGRkMzQtYmNlYS00ZmRhLWI2NWMtYTllYTVhNjZlMGMxIiwidCI6IjNhMmI2MzQ2LWY3ZDctNDhjOC1iOTc0LTQ4YWRhMzRiYzc1NSJ9" target="_blank" class="link-projeto">Abrir Dashboard Interativo →</a>
       </div>
 
       <!-- Projeto 3: Python / Mercado Imobiliário -->
       <div class="card-projeto">
-        <h3>Análise de Dados Imobiliários em SP / Python</h3>
-        <p>Projeto prático de análise do mercado de aluguel residencial em São Paulo desenvolvido no Google Colab, com exploração e visualização de dados extraídos da plataforma QuintoAndar.</p>
+        <div class="card-header">
+          <h3>Análise Imobiliária em São Paulo</h3>
+          <span class="badge">PYTHON</span>
+        </div>
+        <p>Projeto prático desenvolvido no Google Colab durante o Bootcamp da SoulCode, com exploração e visualização de dados do mercado de aluguel residencial extraídos via web scraping.</p>
         <a href="https://colab.research.google.com/drive/1s-TicH8Ywu16JythTlu_byv_EAAIrj-E" target="_blank" class="link-projeto">Abrir Notebook no Google Colab →</a>
+      </div>
+
+      <!-- Projeto 4: SQL / Loja XPTO -->
+      <div class="card-projeto">
+        <div class="card-header">
+          <h3>Consultas e Análise de Estoque</h3>
+          <span class="badge">SQL</span>
+        </div>
+        <p>Projeto prático em SQL desenvolvido durante o Bootcamp da SoulCode, focado na exploração de dados, controle de estoque por categoria e cruzamento de informações para apoio a decisões do negócio.</p>
+        <a href="https://colab.research.google.com/drive/14skg3TouEr0g545uWpNO0-IFHyFxIspr?usp=sharing" target="_blank" class="link-projeto">Abrir Notebook SQL no Google Colab →</a>
       </div>
     </div>
   </div>
