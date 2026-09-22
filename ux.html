@@ -1,24 +1,18 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projetos de UX - Luana Rodrigues</title>
+  <title>Projetos de UX Design | Luana Rodrigues</title>
   <style>
     :root {
       --bg-principal: #0b132b;
       --bg-card: #1c2541;
       --texto-principal: #ffffff;
-      --texto-secundario: #e2e8f0;
+      --texto-secundario: #cbd5e1;
       --azul-destaque: #38bdf8;
-      --borda-metalica: #2d3748;
-      --tag-bg: #2d3748;
-    }
-
-    * {
-      box-sizing: border-box;
+      --borda-container: #38bdf8;
+      --borda-card: #38bdf8;
     }
 
     body {
@@ -29,125 +23,120 @@
       padding: 2rem 1rem;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       min-height: 100vh;
+      box-sizing: border-box;
     }
 
     .container {
       max-width: 850px;
       width: 100%;
       background-color: var(--bg-card);
-      border: 1px solid var(--borda-metalica);
+      border: 2px solid var(--borda-container);
       border-radius: 16px;
       padding: 2.5rem;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     }
 
     .header-page {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid var(--borda-metalica);
+      justify-content: space-between;
+      border-bottom: 2px solid #334155;
       padding-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     h1 {
       margin: 0;
-      font-size: 2rem;
-      color: var(--texto-principal);
+      font-size: 1.8rem;
+      color: var(--azul-destaque);
     }
 
     .btn-voltar {
-      color: var(--azul-destaque);
+      color: var(--texto-secundario);
       text-decoration: none;
-      font-weight: 600;
       font-size: 0.95rem;
-      border: 1px solid var(--azul-destaque);
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: all 0.2s ease-in-out;
+      border: 1.5px solid #334155;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: all 0.2s;
     }
 
     .btn-voltar:hover {
-      background-color: var(--azul-destaque);
-      color: #0b132b;
+      color: var(--azul-destaque);
+      border-color: var(--azul-destaque);
     }
 
-    .projects-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .grid-projetos {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
     }
 
     .card-projeto {
-      background-color: var(--bg-principal);
-      border: 1px solid var(--borda-metalica);
+      background-color: #111a36;
+      border: 2px solid var(--borda-card);
       border-radius: 12px;
-      padding: 1.8rem;
-      transition: transform 0.2s, border-color 0.2s;
+      padding: 1.6rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card-projeto:hover {
-      border-color: var(--azul-destaque);
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
     }
 
     .card-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
+      align-items: flex-start;
       gap: 1rem;
+      margin-bottom: 0.5rem;
     }
 
-    .card-header h3 {
+    .card-projeto h3 {
       margin: 0;
-      font-size: 1.25rem;
       color: var(--texto-principal);
+      font-size: 1.25rem;
     }
 
     .badge {
-      background-color: var(--tag-bg);
+      background-color: rgba(56, 189, 248, 0.15);
       color: var(--azul-destaque);
-      border: 1px solid rgba(56, 189, 248, 0.3);
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.3rem 0.75rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
       white-space: nowrap;
     }
 
-    p {
+    .card-projeto p {
       color: var(--texto-secundario);
-      line-height: 1.6;
       font-size: 0.95rem;
-      margin-bottom: 1.2rem;
+      line-height: 1.5;
+      margin-top: 0.6rem;
     }
 
-    .links-container {
+    .links-group {
       display: flex;
-      gap: 1.2rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
+      margin-top: 0.8rem;
     }
 
     .link-projeto {
+      display: inline-block;
       color: var(--azul-destaque);
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: color 0.2s;
     }
 
     .link-projeto:hover {
       text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .header-page {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
     }
   </style>
 </head>
@@ -159,18 +148,16 @@
       <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
     </div>
 
-    <div class="projects-list">
-
+    <div class="grid-projetos">
+      
       <!-- Projeto 1: Interagir -->
       <div class="card-projeto">
         <div class="card-header">
           <h3>Interagir: Aplicativo para Facilitar a Inclusão de PCDs</h3>
           <span class="badge">ESTUDO DE CASO</span>
         </div>
-        <p>
-          Estudo de caso focado no desenvolvimento do aplicativo Interagir para facilitar a busca de locais com acessibilidade para pessoas com deficiência.
-        </p>
-        <div class="links-container">
+        <p>Estudo de caso focado no desenvolvimento do aplicativo Interagir para facilitar a busca de locais com acessibilidade para pessoas com deficiência.</p>
+        <div class="links-group">
           <a href="https://medium.com/@luanarodrigues.35/interagir-aplicativo-para-facilitar-a-inclus%C3%A3o-de-pessoas-com-defici%C3%AAncia-7a9ec73f6b8b" target="_blank" class="link-projeto">Ler Estudo no Medium →</a>
           <a href="https://docs.google.com/presentation/d/16gumBeVcS9S41cV_bywySE5SJvlmZS9-bDvOT1gDJ5U/present?pli=1&slide=id.gc6f73a04f_0_0" target="_blank" class="link-projeto">Ver Apresentação (Slides) →</a>
         </div>
@@ -182,27 +169,23 @@
           <h3>Game Delas: Plataforma de Games Exclusiva para Mulheres</h3>
           <span class="badge">ESTUDO DE CASO & DASHBOARD</span>
         </div>
-        <p>
-          Proposta de plataforma voltada ao público feminino no cenário gamer, combinando o estudo do produto com a prototipagem de um dashboard de performance e engajamento visualizado no Figma.
-        </p>
-        <div class="links-container">
-          <a href="https://medium.com/@luanarodrigues.35/game-delas-plataforma-de-games-exclusiva-para-mulheres-b2e5748644c3" target="_blank" class="link-projeto">Ler Estudo no Medium →</a>
-          <a href="https://www.figma.com/proto/8KJ35fKgI02GAOqzJ4fgTN/Dashboard?node-id=1-2&t=ZUEDnF7yHEvGiiP3-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" class="link-projeto">Ver Dashboard Interativo no Figma →</a>
+        <p>Proposta de plataforma voltada ao público feminino no cenário gamer, combinando o estudo do produto com a prototipagem de um dashboard de performance e engajamento visualizado no Figma.</p>
+        <div class="links-group">
+          <a href="#" target="_blank" class="link-projeto">Ler Estudo no Medium →</a>
+          <a href="#" target="_blank" class="link-projeto">Ver Dashboard Interativo no Figma →</a>
         </div>
       </div>
 
-      <!-- Projeto 3: Recriação Spotify -->
+      <!-- Projeto 3: Spotify UI -->
       <div class="card-projeto">
         <div class="card-header">
           <h3>Recriação de Interface: Spotify (Desktop & Mobile)</h3>
           <span class="badge">PROTOTIPAGEM & UI</span>
         </div>
-        <p>
-          Estudo de interface com a recriação detalhada do layout desktop e prototipagem interativa mobile do Spotify no Figma, praticando hierarquia visual, alinhamento e design de produto.
-        </p>
-        <div class="links-container">
-          <a href="https://www.figma.com/proto/PSkrj7bgwOHrTgSAKHVJty/Spotify---Tela?node-id=5-37&p=f&t=ZJDIBjvGbRzaQJTO-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" class="link-projeto">Ver Protótipo Desktop no Figma →</a>
-          <a href="https://drive.google.com/file/d/1ZFWfJlFCgnTVpoNP9KwvWtzfd2ayHQSF/view" target="_blank" class="link-projeto">Ver Demonstração Mobile (Vídeo) →</a>
+        <p>Estudo de interface com a recriação detalhada do layout desktop e prototipagem interativa mobile do Spotify no Figma, praticando hierarquia visual, alinhamento e design de produto.</p>
+        <div class="links-group">
+          <a href="#" target="_blank" class="link-projeto">Ver Protótipo Desktop no Figma →</a>
+          <a href="#" target="_blank" class="link-projeto">Ver Demonstração Mobile (Vídeo) →</a>
         </div>
       </div>
 
